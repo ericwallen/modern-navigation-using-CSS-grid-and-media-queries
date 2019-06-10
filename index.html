@@ -79,6 +79,16 @@
 		if(window.innerWidth > 740){
 			navItems.forEach(element => {
 				element.style.display = 'block';
+				mobileMenuShown = true;
+			});
+		};
+	});
+
+	window.addEventListener('resize', () => {
+		if(window.innerWidth < 740){
+			navItems.forEach(element => {
+				element.style.display = 'none';
+				mobileMenuShown = false ;
 			});
 		};
 	});
